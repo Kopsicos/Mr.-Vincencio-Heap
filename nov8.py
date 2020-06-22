@@ -1,4 +1,4 @@
-
+"""
 for j in range(5)
 j = 0
 j = 1
@@ -17,12 +17,13 @@ n = min(n1, n2)
 for it in range(n):
     list1[it]
     list2[it]
-    
+"""    
 
 def largest(list_of_numbers) -> list:
     """
     Return the largest number in list_of_numbers
     """
+    # do it without the max function
     highest = max(list_of_numbers)
     return highest
 
@@ -30,6 +31,7 @@ def remove_duplicates(old_list, new_list) -> list:
     """
     Return a copy of old_list which has no duplicate elements
     """
+    # do it without importing, use a for loop
     import collections
     return [item for item, count in collections.Counter(a).items() if count > 1]
 
@@ -48,6 +50,7 @@ def list_to_string(list_of_numbers) -> list:
     Return a string consisting of each element of list_of_numbers in order
     """
     newstr = ""
+    # see the solution we did in class
     """
     I need help with this one
     """
@@ -56,7 +59,7 @@ def extend_a_list(list2, list1) -> list:
     """
     Add all of the elements of list2 to the end of list1
     """
-    return list1 + list2
+    return list1 + list2 # try witha for loop
 
 def all_squares(max_number) -> list:
     """
@@ -75,7 +78,7 @@ def items_in_common(list1, list2) -> list:
     newlist = []
     for i in list1:
         if i in list2:
-            newlist = newlist + i
+            newlist = newlist + [i] # we can only add lists together, not list+int
     return newlist
 
 def mystery12(list_of_numbers, upper_limit) -> list:
@@ -89,3 +92,4 @@ def mystery12(list_of_numbers, upper_limit) -> list:
             b = False
     return b
 
+## Good work, remember to include examples in your docstrings, and test your code.
